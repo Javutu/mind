@@ -1,0 +1,343 @@
+/* ==== Google font ==== */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600');
+@import url('font-awesome.css');
+@import url('animate.css');
+
+/* ==== overwrite bootstrap standard ==== */
+body {
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.6em;
+	color: #272727;
+	background-color: lightblue;
+	overflow-x: hidden;
+}
+
+.navbar-nav > li > a {
+	border: 1px solid black;
+	color: black;
+	background-color: transparent;
+	margin: 0 5px;
+}
+
+	.navbar-nav > li > a:hover {
+		background-color: black;
+		color: white;
+	}
+
+.mindlogo {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.1s ease-in-out;
+	outline: none;
+	color: #272727;
+}
+
+	a:hover {
+		text-decoration: none;
+		color: #aaa;
+	}
+
+/*===========================
+  Menu and Navigation
+============================ */
+.menu {
+	font-size: 12px;
+	float: right;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+/* Estilos generales para todos los tamaños de pantalla */
+.services {
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+	background-color: #f5f5f5;
+}
+
+.service {
+	flex-basis: calc(33.33% - 20px);
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+img {
+	max-width: 100px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+/* Estilos para pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+	.services {
+		flex-direction: column; /* Apilar los elementos en columnas */
+		align-items: center; /* Centrar horizontalmente */
+	}
+
+	.service {
+		flex-basis: 80%; /* Ocupar 80% del ancho */
+	}
+}
+
+/* Estilos para pantallas pequeñas (hasta 576px) */
+@media (max-width: 576px) {
+	.service {
+		flex-basis: 100%; /* Ocupar 100% del ancho */
+	}
+
+	img {
+		max-width: 60px; /* Reducir el tamaño de la imagen */
+	}
+}
+
+/* Estilos para la sección de herramientas */
+.tools {
+	padding: 50px;
+	background-color: #f5f5f5;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+	.tools h2 {
+		font-size: 24px;
+		margin-bottom: 20px;
+		width: 100%;
+		text-align: center;
+	}
+
+.tool {
+	flex-basis: calc(50% - 20px);
+	margin-bottom: 20px;
+	position: relative;
+}
+
+	.tool img {
+		max-width: 100%;
+		display: block;
+	}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.tool:hover .overlay {
+	opacity: 1;
+}
+
+.text {
+	color: #fff;
+	text-align: center;
+}
+
+.discount {
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+}
+.free-material {
+	text-align: center;
+	padding: 50px;
+}
+
+	.free-material h2 {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.free-material p {
+		font-size: 16px;
+		color: #555;
+		margin-bottom: 30px;
+	}
+
+.carousel-inner {
+	display: flex;
+	justify-content: center;
+}
+
+	.carousel-inner img {
+		max-width: 100%;
+		height: auto;
+		transition: opacity 0.3s;
+	}
+
+		.carousel-inner img:hover {
+			opacity: 0.8;
+		}
+
+/* Estilos para la sección de contacto */
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px;
+}
+
+.contact-image img {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+
+.contact-form {
+	width: 100%;
+	max-width: 600px;
+}
+
+	.contact-form h2 {
+		margin-bottom: 20px;
+	}
+
+	.contact-form form {
+		display: grid;
+		gap: 10px;
+	}
+
+	.contact-form label {
+		font-weight: bold;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.contact-form button {
+		padding: 10px 20px;
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		cursor: pointer;
+	}
+
+	/*imagen de contacto*/
+
+/* Estilos para versiones móviles */
+@media (max-width: 768px) {
+	.contact {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact-image img {
+		max-width: 90%;
+		margin-bottom: 5px; /* Ajusta este valor para cambiar la posición vertical */
+		margin-top: 1px; /*también puedes usar margin-top si prefieres ajustar desde la parte superior */
+		margin-right: 60px;
+	}
+
+	.contact-form {
+		width: 100%;
+		max-width: 400px; /* Cambia el ancho máximo según tu diseño */
+	}
+}
+
+/* Estilos para versiones de escritorio */
+@media (min-width: 769px) {
+	.contact {
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.contact-image img {
+		max-width: 90%;
+		margin-right: 20px;
+		}
+
+	.contact-form {
+		width: 50%;
+	}
+}
+
+/*mapa*/
+.location {
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+	.location h2 {
+		margin-bottom: 20px;
+	}
+
+/* Estilos para el mapa y la imagen */
+.map {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+	.map iframe {
+		max-width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.map img {
+		max-width: 100%;
+	}
+
+/* Estilos para versiones grandes */
+@media (min-width: 769px) {
+	.map {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+
+		.map img {
+			max-width: 40%;
+			margin: 0;
+		}
+}
+
+/* Estilos para versiones móviles */
+@media (max-width: 768px) {
+	.map {
+		flex-direction: column-reverse;
+	}
+
+		.map img {
+			max-width: 70%;
+			margin: 0;
+		}
+
+
+
+}
+
+.location h2 {
+	text-align: center;
+	background-color:red;
+}
+
